@@ -54,10 +54,6 @@ public class Checkers extends JPanel {
     } // end constructor
 
 
-
-    // --------------------  Nested Classes -------------------------------
-
-
     /**
      * A CheckersMove object represents a move in the game of Checkers.
      * It holds the row and column of the piece that is to be moved
@@ -563,13 +559,7 @@ public class Checkers extends JPanel {
                 }
             }
 
-            /*  If any jump moves were found, then the user must jump, so we don't
-             add any regular moves.  However, if no jumps were found, check for
-             any legal regular moves.  Look at each square on the board.
-             If that square contains one of the player's pieces, look at a possible
-             move in each of the four directions from that square.  If there is
-             a legal move in that direction, put it in the moves ArrayList.
-             */
+            //  Jump determination
 
             if (moves.size() == 0) {
                 for (int row = 0; row < 8; row++) {
